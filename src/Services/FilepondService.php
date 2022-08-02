@@ -61,6 +61,7 @@ class FilepondService
         $filepond = Filepond::create([
             'filepath' => $file->store($this->tempFolder, $this->tempDisk),
             'filename' => $file->getClientOriginalName(),
+            'filesize' => $file->getSize(),
             'extension' => $file->getClientOriginalExtension(),
             'mimetypes' => $file->getClientMimeType(),
             'disk' => $this->disk,
